@@ -1,0 +1,56 @@
+$light: #ffffff;
+$dark: lighten(#000000, 5%);
+$glow: rgba(204, 204, 204, 0.000001); // Adjusted brightness white with low opacity
+$fs: 200px;
+
+#glow {
+  font-size: 120px;
+  opacity: 1;
+  text-align: center;
+
+  #major {
+    color: $light;
+    text-shadow:
+      0 0 2px $light,
+      0 0 3px $light,
+      0 0 5px $glow,
+      0 0 7px $glow,
+      0 0 9px $glow,
+      0 0 11px $glow;
+    animation: blink 6.5s infinite alternate; // Total duration is 6.5 seconds
+  }
+
+  #major {
+    display: block;
+  }
+}
+
+@keyframes blink {
+  0%   {
+    text-shadow:
+        0 0 2px $light,
+        0 0 3px $light,
+        0 0 5px $glow,
+        0 0 7px $glow,
+        0 0 9px $glow,
+        0 0 11px $glow;
+  }
+  12.5% {
+    text-shadow:
+        0 0 2px $light,
+        0 0 5px $light,
+        0 0 7px $glow,
+        0 0 9px $glow,
+        0 0 11px $glow,
+        0 0 13px $glow;
+  }
+  100% {
+    text-shadow:
+        0 0 5px $light,
+        0 0 8px $light,
+        0 0 10px $glow,
+        0 0 13px $glow,
+        0 0 16px $glow,
+        0 0 20px $glow;
+  }
+}
