@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import dynamic from 'next/dynamic';
 // const DynamicSketch = dynamic(() => import('./Sketch'), { ssr: false });
 
